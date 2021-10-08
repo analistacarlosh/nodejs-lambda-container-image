@@ -1,0 +1,11 @@
+{
+  "name": "lambda_v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "handler": "node -e 'require(\"./app.js\").handler()'"
+  },
+  "author": "",
+  "license": "ISC"
+}
