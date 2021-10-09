@@ -2,11 +2,20 @@
   "name": "lambda_v1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./dist/app.js",
   "scripts": {
-    "main": "node -e 'require(\"./app.js\").handler()'"
+    "build-dev": "npm run clear && npm run compile && node -e 'require(\"./dist/app.js\").handler()'",
+    "dev": "node -e 'require(\"./dist/app.js\").handler()'",
+    "compile": "tsc",
+    "clear": "rimraf dist"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.83",
+    "@types/node": "^13.13.5",
+    "aws-sdk": "^2.1004.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  }
 }
