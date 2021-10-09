@@ -5,7 +5,8 @@
   "main": "./dist/app.js",
   "scripts": {
     "build-dev": "npm run clear && npm run compile && node -e 'require(\"./dist/app.js\").handler()'",
-    "dev": "node -e 'require(\"./dist/app.js\").handler()'",
+    "dev-js": "node -e 'require(\"./dist/app.js\").handler()'",
+    "dev": "ts-node -e 'require(\"./src/app.ts\").handler()'",
     "compile": "tsc",
     "clear": "rimraf dist"
   },
@@ -17,5 +18,8 @@
     "aws-sdk": "^2.1004.0",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.2.1"
   }
 }
