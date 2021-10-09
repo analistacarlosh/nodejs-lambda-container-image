@@ -1,7 +1,7 @@
-FROM node:12.13.0
+FROM public.ecr.aws/lambda/nodejs:14
 
-WORKDIR /app
-COPY . .
+# Copy function code  
+COPY app.js ${LAMBDA_TASK_ROOT}
 
-RUN echo 'npm run handler'
-CMD [ "npm", "run", "handler" ]
+# Set the CMD to your handler
+CMD [ "app.handler" ]
