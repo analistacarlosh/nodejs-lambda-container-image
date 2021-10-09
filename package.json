@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "handler": "node -e 'require(\"./app.js\").handler()'"
+    "main": "node -e 'require(\"./app.js\").handler()'"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
